@@ -1,0 +1,83 @@
+.next {
+  position: relative;
+  overflow: hidden;
+  background: var(--night);
+  color: var(--paper);
+  padding-block: calc(var(--section-pad) * 1.1) calc(var(--section-pad) * 0.7);
+}
+
+/* A flat crescent: a paper disc with a night disc laid over it, as a two-ink print would do it. */
+.next-moon {
+  position: absolute;
+  inset-block-start: clamp(56px, 9vw, 120px);
+  inset-inline-end: clamp(24px, 12vw, 200px);
+  width: clamp(64px, 7vw, 108px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--sun);
+}
+.next-moon::after {
+  content: '';
+  position: absolute;
+  inset: -4% -4% 4% 26%;
+  border-radius: 50%;
+  background: var(--night);
+}
+:root[dir='rtl'] .next-moon::after {
+  inset: -4% 26% 4% -4%;
+}
+
+.next-inner {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.next-title {
+  max-width: 12ch;
+}
+
+.next-body {
+  margin-block-start: clamp(20px, 3vw, 32px);
+  color: var(--paper-2);
+}
+
+.next-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-block-start: clamp(36px, 5vw, 56px);
+}
+
+.btn-lg {
+  --btn-h: 60px;
+  padding: 0 1.8em;
+  font-size: 1.05rem;
+}
+
+.next-flight {
+  width: min(100%, 900px);
+  margin-block-start: clamp(48px, 7vw, 88px);
+}
+.next-flight .flight {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+:root[dir='rtl'] .next-flight .flight {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 560px) {
+  .next-moon {
+    inset-block-start: 26px;
+    width: 46px;
+  }
+  .next-ctas,
+  .next-ctas .magnetic,
+  .next-ctas .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Visa Linkk Lebanon · Visa & Travel Guidance</title>
+    <meta
+      name="description"
+      content="Visa Linkk Lebanon helps you understand the visa process and prepare your documents: Australian visas, worldwide tourist visas, refusals and appeals, document preparation and translation. In Arabic and English."
+    />
+    <meta name="theme-color" content="#bcd7e3" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Visa Linkk Lebanon" />
+    <meta property="og:description" content="Your next step starts with clear guidance." />
+    <meta property="og:image" content="/images/hero-raouche-wide-1400.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-raouche-wide.webp"
+      imagesrcset="/images/hero-raouche-wide-1400.webp 1400w, /images/hero-raouche-wide.webp 2400w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <script>
+      // Set language and direction before first paint so Arabic visitors never see a flash of LTR.
+      (function () {
+        var lang = 'en'
+        try {
+          var q = new URLSearchParams(location.search).get('lang')
+          var saved = localStorage.getItem('vl-lang')
+          if (q === 'ar' || q === 'en') lang = q
+          else if (saved === 'ar' || saved === 'en') lang = saved
+          else if ((navigator.language || '').toLowerCase().indexOf('ar') === 0) lang = 'ar'
+        } catch (e) {}
+        document.documentElement.lang = lang
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

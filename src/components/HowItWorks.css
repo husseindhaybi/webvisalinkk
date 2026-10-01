@@ -1,0 +1,254 @@
+.how {
+  position: relative;
+  color: var(--paper);
+}
+
+.how-title {
+  max-width: 14ch;
+}
+
+.how-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.how-num {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  box-shadow: inset 0 0 0 1.5px var(--rule-light);
+  transition:
+    background-color 450ms var(--ease-out),
+    color 450ms var(--ease-out),
+    box-shadow 450ms var(--ease-out);
+}
+
+.how-step-title,
+.how-step-body {
+  transition: color 500ms var(--ease-out);
+}
+/* Steps still ahead are dimmed by colour, never by opacity, so they keep 4.5:1 on the sea band. */
+.how-pinned .how-step[data-state='ahead'] .how-step-title,
+.how-pinned .how-step[data-state='ahead'] .how-step-body {
+  color: var(--paper-2);
+}
+.how-step[data-state='done'] .how-num {
+  box-shadow: inset 0 0 0 1.5px var(--gold-bright);
+  color: var(--gold-bright);
+}
+.how-step[data-state='current'] .how-num {
+  background: var(--gold-bright);
+  color: var(--night);
+  box-shadow: none;
+}
+
+.how-step-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-title);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-block: 18px 10px;
+}
+:root[lang='ar'] .how-step-title {
+  letter-spacing: 0;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.how-step-body {
+  color: var(--paper);
+  max-width: 32ch;
+  text-wrap: pretty;
+}
+
+/* ---------- Pinned flight (desktop) ---------- */
+
+.how-pinned {
+  height: 330vh;
+}
+.how-still {
+  height: auto;
+}
+.how-still .how-stage {
+  position: relative;
+  height: auto;
+  padding-block: var(--section-pad) 0;
+}
+.how-still .how-horizon {
+  padding-block-end: calc(var(--section-pad) * 0.6);
+}
+
+.how-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.how-horizon {
+  position: relative;
+  padding-block-start: clamp(28px, 4.5vh, 48px);
+}
+.how-sun {
+  position: absolute;
+  inset-block-end: 100%;
+  inset-inline-end: 3%;
+  width: clamp(130px, 13vw, 210px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--sun);
+}
+.how-sea {
+  position: absolute;
+  inset-block: 0 -100vh;
+  inset-inline: calc(50% - 50vw);
+}
+.how-horizon .how-steps {
+  position: relative;
+}
+
+.how-inner {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 2 * var(--margin), var(--content));
+  display: grid;
+  gap: clamp(8px, 2vh, 24px);
+}
+
+.how-route-wrap {
+  margin-inline: calc(var(--margin) * -0.5);
+}
+.how-route {
+  width: 100%;
+  height: auto;
+  max-height: 34vh;
+  overflow: visible;
+}
+:root[dir='rtl'] .how-route {
+  transform: scaleX(-1);
+}
+
+.route-base {
+  fill: none;
+  stroke: rgba(244, 240, 232, 0.4);
+  stroke-width: 2;
+  stroke-dasharray: 1 11;
+  stroke-linecap: round;
+}
+.route-flown {
+  fill: none;
+  stroke: var(--gold-bright);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.waypoint-ring {
+  fill: none;
+  stroke: rgba(244, 240, 232, 0.45);
+  stroke-width: 1.5;
+  transition: stroke 450ms var(--ease-out);
+}
+.waypoint-dot {
+  fill: rgba(244, 240, 232, 0.55);
+  transition: fill 450ms var(--ease-out);
+}
+.waypoint[data-reached='true'] .waypoint-ring {
+  stroke: var(--gold-bright);
+}
+.waypoint[data-reached='true'] .waypoint-dot {
+  fill: var(--gold-bright);
+}
+
+.how-pinned .how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  text-align: center;
+}
+.how-pinned .how-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-height: 760px) {
+  .how-pinned .how-step-body {
+    font-size: 0.95rem;
+  }
+  .how-route {
+    max-height: 28vh;
+  }
+}
+
+/* ---------- Stacked flight (phones, tablets, reduced motion) ---------- */
+
+.how-stacked {
+  padding-block: var(--section-pad);
+  overflow: hidden;
+}
+.how-stars-stacked {
+  opacity: 0.55;
+}
+
+.how-rail-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  column-gap: clamp(18px, 4vw, 32px);
+  margin-block-start: clamp(40px, 7vw, 72px);
+}
+
+.how-rail {
+  position: relative;
+  justify-self: center;
+  width: 2px;
+  margin-block: 22px 40px;
+  background: rgba(244, 240, 232, 0.22);
+}
+.how-rail-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--gold-bright);
+  transform-origin: top center;
+}
+.how-rail-carrier {
+  position: absolute;
+  inset: 0;
+}
+.how-rail-plane {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 38px;
+  height: auto;
+  translate: -50% -50%;
+  rotate: 90deg;
+}
+
+.how-stacked .how-steps {
+  display: grid;
+  gap: clamp(44px, 9vw, 72px);
+}
+.how-stacked .how-step {
+  position: relative;
+}
+.how-stacked .how-num {
+  position: absolute;
+  inset-inline-start: calc(-44px - clamp(18px, 4vw, 32px));
+  top: 0;
+  background: var(--indigo-deep);
+}
+.how-stacked .how-step[data-state='current'] .how-num {
+  background: var(--gold-bright);
+}
+.how-stacked .how-step-title {
+  margin-block-start: 6px;
+}

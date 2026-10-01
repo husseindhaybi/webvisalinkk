@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T16:46:05.437Z",
+  "title": "Design System: Visa Linkk Lebanon",
+  "extensions": {
+    "colorMeta": {
+      "indigo": {
+        "role": "primary",
+        "displayName": "Logo Indigo",
+        "canonical": "oklch(30.5% 0.143 279.2)",
+        "tonalRamp": [
+          "#090036",
+          "#1d145c",
+          "#343185",
+          "#4f50ac",
+          "#7074d4",
+          "#939afa",
+          "#bac2ff",
+          "#dfe8ff"
+        ]
+      },
+      "indigo-deep": {
+        "role": "primary",
+        "displayName": "Deep Indigo",
+        "canonical": "oklch(25.2% 0.113 279.3)",
+        "tonalRamp": [
+          "#08012e",
+          "#1d1952",
+          "#353579",
+          "#51549c",
+          "#7278c2",
+          "#969dea",
+          "#bcc4ff",
+          "#e1e9ff"
+        ]
+      },
+      "gold-bright": {
+        "role": "secondary",
+        "displayName": "Action Gold",
+        "canonical": "oklch(73.7% 0.115 77.4)",
+        "tonalRamp": [
+          "#1e0200",
+          "#3e1900",
+          "#603400",
+          "#815300",
+          "#a6761e",
+          "#cc9b49",
+          "#f0c27d",
+          "#ffe8ab"
+        ]
+      },
+      "gold-hover": {
+        "role": "secondary",
+        "displayName": "Lit Gold",
+        "canonical": "oklch(78.8% 0.109 79.6)",
+        "tonalRamp": [
+          "#1c0300",
+          "#3c1b00",
+          "#5d3600",
+          "#7e5500",
+          "#a27827",
+          "#c99c4f",
+          "#ecc480",
+          "#ffe9ad"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Logo Gold",
+        "canonical": "oklch(61.0% 0.110 71.4)",
+        "tonalRamp": [
+          "#1f0100",
+          "#3f1700",
+          "#623200",
+          "#835100",
+          "#a9742a",
+          "#d09952",
+          "#f3c082",
+          "#ffe6af"
+        ]
+      },
+      "teal": {
+        "role": "tertiary",
+        "displayName": "Sea Teal",
+        "canonical": "oklch(49.7% 0.076 209.7)",
+        "tonalRamp": [
+          "#00111a",
+          "#002c37",
+          "#004a55",
+          "#186975",
+          "#428d99",
+          "#68b2bf",
+          "#90d8e5",
+          "#bbfbff"
+        ]
+      },
+      "sky": {
+        "role": "tertiary",
+        "displayName": "Morning Sky",
+        "canonical": "oklch(86.3% 0.033 226.4)",
+        "tonalRamp": [
+          "#000e16",
+          "#112730",
+          "#2c444d",
+          "#4a626c",
+          "#6c8590",
+          "#8fa9b5",
+          "#b5d0db",
+          "#d8f4ff"
+        ]
+      },
+      "sand": {
+        "role": "tertiary",
+        "displayName": "Afternoon Sand",
+        "canonical": "oklch(86.4% 0.063 82.0)",
+        "tonalRamp": [
+          "#170700",
+          "#332000",
+          "#503c14",
+          "#6f5a33",
+          "#937d54",
+          "#b8a178",
+          "#dfc79d",
+          "#ffecc3"
+        ]
+      },
+      "sun": {
+        "role": "tertiary",
+        "displayName": "Sun",
+        "canonical": "oklch(90.2% 0.072 86.0)",
+        "tonalRamp": [
+          "#170700",
+          "#332000",
+          "#513c06",
+          "#705b2a",
+          "#937d4c",
+          "#b9a270",
+          "#dfc895",
+          "#ffecbf"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper Stock",
+        "canonical": "oklch(95.6% 0.011 84.6)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27241e",
+          "#433f39",
+          "#615d56",
+          "#838079",
+          "#a8a49d",
+          "#cecac2",
+          "#f2eee6"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "oklch(21.4% 0.089 281.4)",
+        "tonalRamp": [
+          "#090328",
+          "#1f1c4a",
+          "#39386d",
+          "#55578e",
+          "#777ab4",
+          "#9b9edb",
+          "#c1c5ff",
+          "#e5eaff"
+        ]
+      },
+      "night-deep": {
+        "role": "neutral",
+        "displayName": "Deep Night",
+        "canonical": "oklch(17.8% 0.069 281.8)",
+        "tonalRamp": [
+          "#090524",
+          "#1f1e44",
+          "#3a3b63",
+          "#575984",
+          "#797ba9",
+          "#9da0cf",
+          "#c3c6f7",
+          "#e7eaff"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Soft Indigo",
+        "canonical": "oklch(42.0% 0.110 286.7)",
+        "tonalRamp": [
+          "#0c002c",
+          "#231850",
+          "#3d3376",
+          "#5a5298",
+          "#7c75be",
+          "#a09ae6",
+          "#c5c1ff",
+          "#eae7ff"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Pale Lilac",
+        "canonical": "oklch(84.3% 0.039 295.4)",
+        "tonalRamp": [
+          "#0d071a",
+          "#252035",
+          "#413c52",
+          "#5f5972",
+          "#827c96",
+          "#a6a0bb",
+          "#ccc6e2",
+          "#f0eaff"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Indigo Rule",
+        "canonical": "rgba(38, 27, 116, 0.22)"
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "canonical": "rgba(244, 240, 232, 0.2)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline and closing call to action."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, 12 to 14ch."
+      },
+      "poster-lettering": {
+        "displayName": "Poster Lettering",
+        "purpose": "Heavy uppercase destination word across the foot of each service poster sheet; sized in container units."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service and step titles; uses the heading family."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Section intros, max 46ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, 32 to 54ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Factual field names and the photo caption only; never a kicker above a heading."
+      },
+      "display-ar": {
+        "displayName": "Arabic Display",
+        "purpose": "Reem Kufi at display and headline sizes only."
+      },
+      "heading-ar": {
+        "displayName": "Arabic Heading",
+        "purpose": "Readex Pro for all mid-level Arabic headings."
+      },
+      "body-ar": {
+        "displayName": "Arabic Body",
+        "purpose": "Readex Pro running copy with open leading."
+      }
+    },
+    "shadows": [
+      {
+        "name": "stroke-inset",
+        "value": "inset 0 0 0 1.5px currentColor",
+        "purpose": "Outline for line buttons and step numbers; a stroke, not a shadow."
+      },
+      {
+        "name": "stroke-hairline",
+        "value": "inset 0 0 0 1px var(--rule-dark)",
+        "purpose": "Hairline outline for the language toggle, burger and close button (var(--rule-light) on dark)."
+      },
+      {
+        "name": "nav-rule",
+        "value": "0 1px 0 var(--rule-dark)",
+        "purpose": "1px rule under the scrolled nav."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Default for state changes, underlines, hover reveals and press feedback."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Burger morph."
+      },
+      {
+        "name": "ease-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Long rise-in reveals."
+      },
+      {
+        "name": "ease-drawer",
+        "value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "purpose": "Nav hide on scroll and the service drawer slide."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.97), 160ms ease-out",
+        "purpose": "Active state on buttons (0.94 to 0.95 on small round controls)."
+      },
+      {
+        "name": "language-switch",
+        "value": "opacity 0 + blur(6px), 190ms ease",
+        "purpose": "Blur out, swap language, settle."
+      },
+      {
+        "name": "poster-reveal",
+        "value": "clip-path circle from pointer, 520ms / 1100ms ease-out",
+        "purpose": "Colour original grows over the duotone print on hover."
+      },
+      {
+        "name": "in-view",
+        "value": "once, margin '0px 0px -12% 0px'",
+        "purpose": "Where scroll-triggered reveals fire."
+      },
+      {
+        "name": "ambient-loops",
+        "value": "photo breathe 18s, waves 9s, band 46s, plane bob 5.5s, star twinkle 4s",
+        "purpose": "Slow loops that keep the poster alive; all stop under prefers-reduced-motion."
+      },
+      {
+        "name": "dusk-stops",
+        "value": "sky #1f6e7a > #1a4a6c > #150f40; sea #175a64 > #143a58 > #0e0a2e",
+        "purpose": "Scroll-driven flat grounds in How it works (colour as time)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "560px"
+      },
+      {
+        "name": "nav-compact",
+        "value": "720px"
+      },
+      {
+        "name": "stack",
+        "value": "940px"
+      },
+      {
+        "name": "hero-tight",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "Primary action: explore services, chat on WhatsApp.",
+      "html": "<button class=\"ds-btn ds-btn-gold\">Explore Our Visa Services <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.7em;min-height:54px;padding:0 1.55em;border-radius:999px;border:0;font-family:'Jost Variable',system-ui,sans-serif;font-size:1rem;font-weight:600;letter-spacing:.005em;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 220ms ease,color 220ms ease}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #261b74;outline-offset:4px}.ds-btn-gold{background:#d2a04f;color:#150f40}.ds-btn-gold:hover{background:#dfb265}"
+    },
+    {
+      "name": "Ink Line Button",
+      "kind": "button",
+      "refersTo": "button-line-ink",
+      "description": "Secondary action on light grounds.",
+      "html": "<button class=\"ds-btn ds-btn-line-ink\">Contact Us</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.7em;min-height:54px;padding:0 1.55em;border-radius:999px;border:0;font-family:'Jost Variable',system-ui,sans-serif;font-size:1rem;font-weight:600;letter-spacing:.005em;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 220ms ease,color 220ms ease}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #261b74;outline-offset:4px}.ds-btn-line-ink{background:transparent;color:#261b74;box-shadow:inset 0 0 0 1.5px currentColor}.ds-btn-line-ink:hover{background:#261b74;color:#f4f0e8}"
+    },
+    {
+      "name": "Paper Line Button",
+      "kind": "button",
+      "refersTo": "button-line-paper",
+      "description": "Secondary action on night and dusk grounds.",
+      "html": "<div style=\"background:#150f40;padding:24px\"><button class=\"ds-btn ds-btn-line-paper\">Book a Consultation</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.7em;min-height:54px;padding:0 1.55em;border-radius:999px;border:0;font-family:'Jost Variable',system-ui,sans-serif;font-size:1rem;font-weight:600;letter-spacing:.005em;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 220ms ease,color 220ms ease}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #261b74;outline-offset:4px}.ds-btn-line-paper{background:transparent;color:#f4f0e8;box-shadow:inset 0 0 0 1.5px currentColor}.ds-btn-line-paper:hover{background:#f4f0e8;color:#150f40}.ds-btn-line-paper:focus-visible{outline-color:#d2a04f}"
+    },
+    {
+      "name": "Service Poster Sheet",
+      "kind": "card",
+      "refersTo": "poster-sheet-indigo",
+      "description": "A flat-ink sheet holding a two-ink print, with the destination lettered heavy across its foot.",
+      "html": "<a class=\"ds-poster\" href=\"#\"><div class=\"ds-poster-sheet\"><div class=\"ds-poster-print\"></div><div class=\"ds-poster-lockup\">Sydney</div></div><div class=\"ds-poster-title\">Australian Visa Services</div><span class=\"ds-poster-cta\">Ask about this</span></a>",
+      "css": ".ds-poster{display:block;width:320px;color:#261b74;text-decoration:none;font-family:'Jost Variable',system-ui,sans-serif}.ds-poster-sheet{container-type:inline-size;background:#261b74;padding:14px 14px 0}.ds-poster-print{aspect-ratio:7/6;background-color:#e7cfa4;background-image:radial-gradient(#261b74 1px,transparent 1.4px);background-size:4px 4px;transition:scale 1200ms cubic-bezier(.23,1,.32,1)}.ds-poster:hover .ds-poster-print{scale:1.02}.ds-poster-lockup{color:#e7cfa4;font-size:13.5cqi;font-weight:800;line-height:.92;letter-spacing:-.01em;text-transform:uppercase;padding:.34em 0 .26em}.ds-poster-title{font-size:1.4rem;font-weight:500;line-height:1.15;margin-top:20px}.ds-poster-cta{display:inline-block;margin-top:8px;font-weight:600;padding-bottom:4px;background:linear-gradient(currentColor,currentColor) no-repeat 0 100%/100% 1.5px;transition:background-size 400ms cubic-bezier(.23,1,.32,1)}.ds-poster:hover .ds-poster-cta{background-size:0 1.5px;background-position:100% 100%}.ds-poster:focus-visible{outline:2px solid #261b74;outline-offset:4px;border-radius:6px}"
+    },
+    {
+      "name": "Arch Frame",
+      "kind": "custom",
+      "refersTo": "rounded.arch",
+      "description": "Half-round-topped window framing a duotone print, in a paper frame over a sun disc.",
+      "html": "<div class=\"ds-arch-wrap\"><div class=\"ds-sun\"></div><div class=\"ds-arch-frame\"><div class=\"ds-arch\"></div></div></div>",
+      "css": ".ds-arch-wrap{position:relative;width:220px;height:280px;background:#bcd7e3;overflow:hidden}.ds-sun{position:absolute;top:10px;right:0;width:96px;height:96px;border-radius:50%;background:#f4dca8}.ds-arch-frame{position:absolute;inset:18px 30px 0;padding:7px 7px 0;border-radius:999px 999px 0 0;background:#f4f0e8}.ds-arch{height:100%;border-radius:999px 999px 0 0;background-color:#bcd7e3;background-image:radial-gradient(#261b74 1.1px,transparent 1.5px);background-size:4px 4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Scrolled state: paper bar, 1px indigo rule, links with draw-in underline, gold WhatsApp pill.",
+      "html": "<nav class=\"ds-nav\"><strong class=\"ds-nav-logo\">VISA LINKK</strong><div class=\"ds-nav-links\"><a href=\"#\">Home</a><a href=\"#\">Our Services</a><a href=\"#\">About Us</a><a href=\"#\">Contact Us</a></div><a class=\"ds-nav-wa\" href=\"#\">WhatsApp</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;height:76px;padding:0 32px;background:#f4f0e8;box-shadow:0 1px 0 rgba(38,27,116,.22);color:#261b74;font-family:'Jost Variable',system-ui,sans-serif}.ds-nav-logo{letter-spacing:.06em}.ds-nav-links{display:flex;gap:28px;margin-left:auto}.ds-nav-links a{position:relative;padding:6px 0;font-weight:500;text-decoration:none;color:inherit}.ds-nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform 320ms cubic-bezier(.23,1,.32,1)}.ds-nav-links a:hover::after{transform:scaleX(1);transform-origin:left}.ds-nav-links a:focus-visible,.ds-nav-wa:focus-visible{outline:2px solid #261b74;outline-offset:4px;border-radius:4px}.ds-nav-wa{display:inline-flex;align-items:center;min-height:42px;padding:0 1.15em;border-radius:999px;background:#d2a04f;color:#150f40;font-weight:600;text-decoration:none}.ds-nav-wa:hover{background:#dfb265}"
+    },
+    {
+      "name": "Language Toggle",
+      "kind": "chip",
+      "refersTo": "lang-toggle-active",
+      "description": "Pill track with a sliding indigo pill under the active language.",
+      "html": "<div class=\"ds-lang\"><button class=\"ds-lang-opt is-on\" aria-pressed=\"true\">EN</button><button class=\"ds-lang-opt\" lang=\"ar\" aria-pressed=\"false\">عربي</button></div>",
+      "css": ".ds-lang{display:inline-flex;padding:3px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(38,27,116,.22)}.ds-lang-opt{min-width:48px;height:34px;padding:0 12px;border:0;border-radius:999px;background:transparent;color:#261b74;font:600 .875rem/1 'Jost Variable',system-ui,sans-serif;cursor:pointer;transition:color 250ms ease,background-color 250ms ease,transform 160ms cubic-bezier(.23,1,.32,1)}.ds-lang-opt[lang=ar]{font-family:'Readex Pro Variable',sans-serif;font-weight:500}.ds-lang-opt.is-on{background:#261b74;color:#f4f0e8}.ds-lang-opt:active{transform:scale(.95)}.ds-lang-opt:focus-visible{outline:2px solid #261b74;outline-offset:4px}"
+    },
+    {
+      "name": "Step Number",
+      "kind": "custom",
+      "refersTo": "step-number-current",
+      "description": "How it works progress: ahead (paper ring), done (gold ring), current (gold disc).",
+      "html": "<div class=\"ds-steps\"><span class=\"ds-num ds-done\">1</span><span class=\"ds-num ds-current\">2</span><span class=\"ds-num\">3</span></div>",
+      "css": ".ds-steps{display:flex;gap:16px;padding:24px;background:#1f6e7a;font-family:'Jost Variable',system-ui,sans-serif}.ds-num{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;color:#f4f0e8;font-weight:600;box-shadow:inset 0 0 0 1.5px rgba(244,240,232,.2);transition:background-color 450ms cubic-bezier(.23,1,.32,1),color 450ms cubic-bezier(.23,1,.32,1)}.ds-done{color:#d2a04f;box-shadow:inset 0 0 0 1.5px #d2a04f}.ds-current{background:#d2a04f;color:#150f40;box-shadow:none}"
+    },
+    {
+      "name": "Destination Band",
+      "kind": "custom",
+      "refersTo": "destination-band",
+      "description": "Indigo strip of tracked uppercase destinations drifting in the reading direction.",
+      "html": "<div class=\"ds-band\"><span>Australia</span><i></i><span>Italy</span><i></i><span>Greece</span><i></i><span>Spain</span></div>",
+      "css": ".ds-band{display:flex;align-items:center;gap:34px;height:64px;padding:0 24px;background:#261b74;color:#f4f0e8;font:500 .95rem 'Jost Variable',system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden}.ds-band i{width:8px;height:8px;border-radius:50%;background:#f4f0e8;opacity:.55}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Beirut Travel Poster",
+    "overview": "The page is a silkscreened travel poster from 1960s Beirut, printed in a handful of flat inks on warm paper stock. Every surface is one ink laid flat; photographs are printed as smooth two-ink plates; frames are Lebanese arches; a fine print grain sits over everything. Depth comes from inks overlapping, never from light and shadow.\n\nColour tells the time of day. The page opens on a morning sky, passes through paper and four poster sheets, into a sand afternoon, a teal dusk that darkens to indigo as the visitor scrolls, and closes on a starred night with a crescent moon. Any new surface places itself somewhere on that day and takes that ink as its ground.\n\nGold comes from the client's logo and is rationed: it marks what the visitor can do next and how far they have come, plus the logo's own swoosh and plane. The two brand inks (indigo and gold) are the logo's, and they govern over any earlier proposed value.",
+    "keyCharacteristics": [
+      "Flat ink fields, one per section, sequenced as a day from morning to night.",
+      "Smooth two-ink duotone photographs (no dot screen); the full-colour original appears only on hover.",
+      "Arch-topped frames (full half-round tops, square feet) for photographs and scenery.",
+      "Jost (Futura lineage) in Latin; Reem Kufi display and Readex Pro text in Arabic, fully RTL.",
+      "Pill-shaped controls, square-cornered poster sheets.",
+      "A fixed poster margin and one 12-column print grid for the whole page.",
+      "Print grain overlay at 7.5% over every surface."
+    ],
+    "rules": [
+      {
+        "name": "The Gold Is Law Rule",
+        "body": "Action Gold marks only an action, the visitor's progress (current step, flown route, reached waypoint), or the logo's own swoosh and plane. It is never a section ground, never body or heading text, never decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Colour Is Time Rule",
+        "body": "Each section is one flat ground chosen from the day: sky (morning), paper, sand (afternoon), teal to indigo (dusk), night. A new section takes the ink of its place in the day; it does not invent a new ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dim By Colour Rule",
+        "body": "Secondary or not-yet-reached text is dimmed by switching to Soft Indigo or Pale Lilac, never by opacity, so it keeps 4.5:1 on its ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Kufi For Size Rule",
+        "body": "In Arabic, Reem Kufi is used only at display and headline sizes; every mid-level heading switches to Readex Pro via the heading family.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Tracking In Arabic Rule",
+        "body": "Arabic sets letter-spacing to 0 everywhere and opens line-height (display 1.22, body 1.85).",
+        "section": "typography"
+      },
+      {
+        "name": "The Print Order Rule",
+        "body": "Things sit in front of each other the way inks are laid on a poster: flat shape over flat shape. Never a blur, glow or offset shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every section one flat ground from the day sequence: sky, paper, sand, teal to indigo, night.",
+      "Do print photographs as smooth two-ink duotones and frame them in arches or poster sheets; keep the colour original for the hover reveal only. A visible halftone dot screen was tried and rejected by the owner: at screen size it reads as perforation, not print.",
+      "Do reserve Action Gold (#d2a04f) for actions, progress and the logo's plane and swoosh.",
+      "Do dim secondary text by colour (Soft Indigo on light, Pale Lilac on dark), never by opacity.",
+      "Do make every control a pill and every sheet square.",
+      "Do build with logical properties and flip directional art in RTL; Arabic takes Reem Kufi for display, Readex Pro for everything else, with zero tracking.",
+      "Do ease with the shared curves (ease-out `cubic-bezier(0.23, 1, 0.32, 1)` for most transitions) and stop ambient loops under `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "Don't paint a visible colour gradient on any surface; transitions between grounds happen over time (scroll), not across space.",
+      "Don't use cast, drop or glow shadows; `box-shadow` is only for inset strokes and the nav's 1px rule.",
+      "Don't use gold as a section ground, heading colour or ornament.",
+      "Don't set Reem Kufi below headline size or track Arabic text.",
+      "Don't place work off the 12-column grid or outside the poster margin.",
+      "Don't add uppercase tracked labels above headings; the Label style is only for factual field names and captions."
+    ]
+  }
+}

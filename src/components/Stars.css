@@ -1,0 +1,24 @@
+.stars {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.stars circle {
+  fill: var(--paper);
+  opacity: 0.75;
+}
+.stars .twinkle {
+  animation: twinkle 4s ease-in-out infinite;
+}
+@keyframes twinkle {
+  50% {
+    opacity: 0.15;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stars .twinkle {
+    animation: none;
+  }
+}

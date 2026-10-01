@@ -1,0 +1,103 @@
+.why {
+  position: relative;
+  padding-block: var(--section-pad);
+  background: var(--sand);
+  color: var(--indigo);
+  overflow-x: clip;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: 64px;
+  align-items: center;
+}
+
+.why-art {
+  grid-column: 1 / span 5;
+  position: relative;
+}
+
+.why-copy {
+  grid-column: 7 / span 6;
+}
+.why-copy .display-2 {
+  max-width: 12ch;
+  margin-block-end: clamp(32px, 4vw, 56px);
+}
+
+/* Triple arch: each opening shows its own slice of the one image, so the view reads as continuous. */
+.triple {
+  --col: clamp(10px, 1.3vw, 16px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--col);
+  aspect-ratio: 5 / 6.4;
+  container-type: inline-size;
+}
+.triple-arch {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px 999px 0 0;
+  background: var(--indigo);
+}
+.triple-arch img {
+  position: absolute;
+  inset-block: -9%;
+  inset-inline-start: calc(var(--i) * (100cqw + var(--col)) / -3);
+  width: 100cqw;
+  max-width: none;
+  height: 118%;
+  object-fit: cover;
+}
+.triple-sill {
+  height: 14px;
+  background: var(--indigo);
+}
+
+.why-list {
+  display: grid;
+}
+.why-item {
+  position: relative;
+  padding-block: 20px;
+}
+.why-item:last-child {
+  padding-block-end: 0;
+}
+.why-rule {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 0;
+  height: 1px;
+  background: var(--rule-dark);
+  transform-origin: left center;
+}
+:root[dir='rtl'] .why-rule {
+  transform-origin: right center;
+}
+.why-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+.why-icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  color: var(--indigo);
+}
+
+@media (max-width: 940px) {
+  .why-art,
+  .why-copy {
+    grid-column: 1 / -1;
+  }
+  .why-art {
+    width: min(100%, 440px);
+  }
+}

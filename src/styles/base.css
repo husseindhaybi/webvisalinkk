@@ -1,0 +1,317 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-color: var(--indigo) var(--paper);
+  background: var(--night-deep);
+}
+
+html.scroll-locked {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--indigo);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--body-leading);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  caret-color: var(--gold);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--gold-bright);
+  color: var(--night);
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--indigo);
+  border-radius: 999px;
+  border: 3px solid var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus, var(--indigo));
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.on-dark {
+  --focus: var(--gold-bright);
+}
+
+.container {
+  width: min(100% - 2 * var(--margin), var(--content));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 12px;
+  inset-inline-start: 12px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--indigo);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 200ms var(--ease-out);
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Type ---------- */
+
+.display-1,
+.display-2 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: var(--display-leading);
+  text-wrap: balance;
+}
+.display-1 {
+  font-size: var(--fs-display-1);
+}
+.display-2 {
+  font-size: var(--fs-display-2);
+}
+
+.lede {
+  font-size: var(--fs-lede);
+  line-height: 1.55;
+  max-width: 46ch;
+  text-wrap: pretty;
+}
+
+:root[lang='ar'] .lede {
+  line-height: 1.85;
+}
+
+.caps {
+  font-size: var(--fs-caps);
+  font-weight: 600;
+  letter-spacing: var(--caps-tracking);
+  text-transform: uppercase;
+}
+
+/* Line and word masks for rise-in reveals. The padding keeps descenders and Arabic marks unclipped. */
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-block: 0.06em 0.14em;
+  margin-block: -0.06em -0.14em;
+}
+.mask-line {
+  display: block;
+}
+.mask-inner {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  --btn-h: 54px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  min-height: var(--btn-h);
+  padding: 0 1.55em;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-sm {
+  --btn-h: 42px;
+  padding: 0 1.15em;
+  font-size: 0.9375rem;
+}
+
+.btn-gold {
+  background: var(--gold-bright);
+  color: var(--night);
+}
+.btn-line {
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+.btn-line.ink {
+  color: var(--indigo);
+}
+.btn-line.paper {
+  color: var(--paper);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-gold:hover {
+    background: var(--gold-hover);
+  }
+  .btn-line.ink:hover {
+    background: var(--indigo);
+    color: var(--paper);
+    box-shadow: inset 0 0 0 1.5px var(--indigo);
+  }
+  .btn-line.paper:hover {
+    background: var(--paper);
+    color: var(--night);
+    box-shadow: inset 0 0 0 1.5px var(--paper);
+  }
+}
+
+/* Arrow that slides out and a twin that slides in on hover. */
+.arrow-swap {
+  position: relative;
+  display: inline-flex;
+  width: 1.05em;
+  height: 1.05em;
+  overflow: hidden;
+  flex: none;
+}
+.arrow-swap svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 380ms var(--ease-out);
+}
+.arrow-swap svg + svg {
+  transform: translateX(-130%);
+}
+:root[dir='rtl'] .arrow-swap svg {
+  scale: -1 1;
+}
+:root[dir='rtl'] .arrow-swap svg + svg {
+  transform: translateX(130%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .arrow-swap svg:first-child,
+  .poster-link:hover .arrow-swap svg:first-child,
+  .sheet-ask:hover .arrow-swap svg:first-child {
+    transform: translateX(130%);
+  }
+  :root[dir='rtl'] .btn:hover .arrow-swap svg:first-child,
+  :root[dir='rtl'] .poster-link:hover .arrow-swap svg:first-child,
+  :root[dir='rtl'] .sheet-ask:hover .arrow-swap svg:first-child {
+    transform: translateX(-130%);
+  }
+  .btn:hover .arrow-swap svg + svg,
+  .poster-link:hover .arrow-swap svg + svg,
+  .sheet-ask:hover .arrow-swap svg + svg {
+    transform: translateX(0);
+  }
+}
+
+/* ---------- Print grain over everything, like ink on paper stock ---------- */
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.075;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0 0.25 0 0 0 1.4 -0.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Language switch: blur out, swap, settle ---------- */
+
+.site {
+  transition:
+    opacity 190ms ease,
+    filter 190ms ease;
+}
+.is-switching .site {
+  opacity: 0;
+  filter: blur(6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

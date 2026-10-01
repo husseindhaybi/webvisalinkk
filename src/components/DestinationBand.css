@@ -1,0 +1,48 @@
+.band {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  background: var(--indigo);
+  color: var(--paper);
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.band-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.band-run {
+  display: flex;
+  flex: none;
+}
+
+.band-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 34px;
+  padding-inline-end: 34px;
+}
+
+.band-word {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: var(--caps-tracking);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+:root[lang='ar'] .band-word {
+  font-size: 1.05rem;
+}
+
+.band-plane {
+  width: 20px;
+  height: auto;
+  opacity: 0.55;
+}
+:root[dir='rtl'] .band-plane {
+  transform: scaleX(-1);
+}

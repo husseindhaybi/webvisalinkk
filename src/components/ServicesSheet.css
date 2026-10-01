@@ -1,0 +1,107 @@
+.sheet-root {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+}
+
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 10, 46, 0.55);
+}
+
+.sheet {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: min(580px, 100%);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--paper);
+  color: var(--indigo);
+  padding: clamp(24px, 4vw, 48px);
+  padding-block-end: calc(48px + env(safe-area-inset-bottom));
+}
+
+.sheet-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-block-end: clamp(28px, 4vw, 44px);
+}
+
+.sheet-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.6rem + 1.6vw, 2.8rem);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.05;
+}
+:root[lang='ar'] .sheet-title {
+  line-height: 1.3;
+}
+
+.sheet-close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--rule-dark);
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 200ms ease,
+    color 200ms ease;
+}
+.sheet-close:active {
+  transform: scale(0.94);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sheet-close:hover {
+    background: var(--indigo);
+    color: var(--paper);
+  }
+}
+
+.sheet-group {
+  display: grid;
+  gap: 14px;
+  padding-block: 26px;
+  border-top: 1px solid var(--rule-dark);
+}
+.sheet-group h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.sheet-group ul {
+  display: grid;
+  gap: 8px;
+}
+.sheet-group li {
+  position: relative;
+  padding-inline-start: 22px;
+  color: var(--ink-2);
+}
+.sheet-group li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 2px;
+  top: 0.72em;
+  width: 9px;
+  height: 1.5px;
+  background: var(--indigo);
+}
+
+.sheet-ask {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  width: fit-content;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}

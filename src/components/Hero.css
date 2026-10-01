@@ -1,0 +1,293 @@
+.hero {
+  position: relative;
+  background: var(--sky);
+  color: var(--indigo);
+  overflow-x: clip;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  align-items: center;
+  min-height: calc(100svh - 64px);
+  padding-block: calc(var(--nav-h) + clamp(24px, 4vh, 56px)) clamp(40px, 7vh, 88px);
+}
+
+.hero-copy {
+  grid-column: 1 / span 7;
+  position: relative;
+  z-index: 2;
+}
+
+/* Sized by height as well as width, so short laptop screens still fit the headline and its actions. */
+.hero-title {
+  font-size: clamp(2.6rem, min(1.1rem + 5.4vw, 10.5vh), 5.9rem);
+  margin-block-end: clamp(20px, 3.2vh, 40px);
+}
+:root[lang='ar'] .hero-title {
+  font-size: clamp(2.4rem, min(1.1rem + 4.7vw, 9vh), 5.1rem);
+}
+
+.hero-question {
+  font-size: clamp(1.15rem, 1rem + 0.45vw, 1.4rem);
+  font-weight: 600;
+  margin-block-end: 10px;
+}
+
+.hero-body {
+  max-width: 50ch;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-block-start: clamp(24px, 4vh, 44px);
+}
+
+/* ---------- The poster art: sun, ranges, arch window, swoosh ---------- */
+
+.hero-art {
+  --foot: clamp(40px, 7vh, 88px);
+  grid-column: 8 / span 5;
+  position: relative;
+  width: min(100%, calc((100svh - 230px) * 600 / 740));
+  aspect-ratio: 600 / 740;
+  justify-self: end;
+  /* The poster stands on the band: its sea runs straight into the destination strip. */
+  align-self: end;
+  margin-block-end: calc(-1 * var(--foot));
+}
+
+.hero-land {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-land svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+:root[dir='rtl'] .hero-land svg {
+  scale: -1 1;
+}
+
+.hero-sun-track {
+  position: absolute;
+  inset-block-start: 5%;
+  inset-inline-start: 57%;
+  width: 42%;
+  aspect-ratio: 1;
+}
+.hero-sun {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--sun);
+}
+
+/* Where the arch stands. The window measures this box and opens from it. */
+.hero-arch-anchor {
+  position: absolute;
+  inset-block: 5.4% 0;
+  inset-inline: 15%;
+  pointer-events: none;
+}
+
+.hero-window {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-window-mat,
+.hero-window-clip {
+  position: absolute;
+  inset: 0;
+}
+.hero-window-mat {
+  background: var(--paper);
+  clip-path: inset(100% 0 0 0);
+}
+.hero-window-clip {
+  overflow: hidden;
+  background: var(--indigo);
+  clip-path: inset(100% 0 0 0);
+}
+.hero-window-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2400px;
+  height: 1600px;
+  max-width: none;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.hero-caption {
+  position: absolute;
+  z-index: 6;
+  inset-block-end: 17%;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--indigo);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+:root[dir='rtl'] .hero-caption {
+  translate: 50% 0;
+  font-size: 0.8rem;
+}
+
+.hero-flight-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.hero-flight {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+:root[dir='rtl'] .hero-flight {
+  transform: scaleX(-1);
+}
+
+/* The destination, lettered across the open window like the foot of a travel poster. */
+.hero-lockup {
+  position: absolute;
+  z-index: 6;
+  inset-inline-start: max(var(--margin), (100% - var(--content)) / 2);
+  inset-block-end: calc(64px + 22px + 2vh);
+  margin: 0;
+  color: var(--sun);
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 15vw, 15.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.86;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+:root[lang='ar'] .hero-lockup {
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-size: clamp(4rem, 13vw, 13rem);
+}
+
+.hero-waves {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 64px;
+  z-index: 6;
+  height: 22px;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='22'%3E%3Cpath d='M0 8C20 2 40 2 60 8S100 14 120 8L120 22L0 22Z' fill='%23261b74'/%3E%3C/svg%3E")
+    repeat-x 0 0 / 120px 22px;
+  animation: waves-drift 9s linear infinite;
+}
+:root[dir='rtl'] .hero-waves {
+  animation-name: waves-drift-rtl;
+}
+@keyframes waves-drift {
+  to {
+    background-position-x: 120px;
+  }
+}
+@keyframes waves-drift-rtl {
+  to {
+    background-position-x: -120px;
+  }
+}
+
+.plane-bob {
+  animation: plane-bob 5.5s ease-in-out infinite;
+}
+@keyframes plane-bob {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plane-bob,
+  .hero-waves {
+    animation: none;
+  }
+}
+
+/* ---------- Desktop: the poster pins while its window opens onto the whole screen ---------- */
+
+.hero-pinned {
+  height: 250vh;
+}
+.hero-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.hero-pinned .hero-grid {
+  flex: 1;
+  min-height: 0;
+  padding-block: calc(var(--nav-h) + clamp(16px, 3vh, 40px)) 0;
+}
+.hero-pinned .hero-art {
+  width: min(100%, calc((100svh - var(--nav-h) - 64px - clamp(16px, 3vh, 40px)) * 600 / 740));
+  margin-block-end: 0;
+}
+.hero-pinned .band {
+  flex: none;
+  z-index: 7;
+}
+
+/* ---------- Phones and tablets ---------- */
+
+@media (max-width: 940px) {
+  .hero-grid {
+    min-height: 0;
+    row-gap: 56px;
+    padding-block-end: 64px;
+  }
+  .hero-copy,
+  .hero-art {
+    grid-column: 1 / -1;
+  }
+  /* Edge to edge on phones, so the window can open across the whole screen. */
+  .hero-art {
+    --foot: 64px;
+    justify-self: center;
+    width: min(100vw, 600px);
+    margin-inline: calc((100% - min(100vw, 600px)) / 2);
+  }
+  .hero-art .hero-lockup {
+    inset-inline-start: 20px;
+    inset-block-end: 34px;
+    font-size: 17vw;
+  }
+  :root[lang='ar'] .hero-art .hero-lockup {
+    font-size: 16vw;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-ctas .btn,
+  .hero-ctas .magnetic {
+    width: 100%;
+  }
+}

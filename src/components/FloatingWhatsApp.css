@@ -1,0 +1,47 @@
+.float-wa {
+  position: fixed;
+  inset-block-end: calc(20px + env(safe-area-inset-bottom));
+  inset-inline-end: calc(20px + env(safe-area-inset-right));
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-inline: 17px;
+  border-radius: 999px;
+  background: var(--gold-bright);
+  color: var(--night);
+  text-decoration: none;
+  font-weight: 600;
+  --focus: var(--indigo);
+}
+.float-wa svg {
+  flex: none;
+  transition: transform 160ms var(--ease-out);
+}
+.float-wa:active svg {
+  transform: scale(0.92);
+}
+
+/* The label unfolds beside the icon on hover; touch screens get the icon alone. */
+.float-wa-label {
+  display: grid;
+  grid-template-columns: 0fr;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+    grid-template-columns 420ms var(--ease-out),
+    margin 420ms var(--ease-out);
+}
+.float-wa-label > span {
+  min-width: 0;
+  overflow: hidden;
+}
+@media (hover: hover) and (pointer: fine) {
+  .float-wa:hover {
+    background: var(--gold-hover);
+  }
+  .float-wa:hover .float-wa-label {
+    grid-template-columns: 1fr;
+    margin-inline-start: 10px;
+  }
+}

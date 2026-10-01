@@ -1,0 +1,188 @@
+.nav {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 70;
+  height: var(--nav-h);
+  transition:
+    transform 500ms var(--ease-drawer),
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+.nav[data-scrolled='true'] {
+  background: var(--paper);
+  box-shadow: 0 1px 0 var(--rule-dark);
+}
+.nav[data-hidden='true'] {
+  transform: translateY(-100%);
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  transition: opacity 190ms ease;
+}
+.is-switching .nav-inner {
+  opacity: 0;
+}
+
+.nav-logo {
+  flex: none;
+  border-radius: 6px;
+}
+.nav-logo img {
+  height: 58px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(18px, 2.4vw, 36px);
+  margin-inline-start: auto;
+}
+.nav-links a {
+  position: relative;
+  padding-block: 6px;
+  font-size: 0.975rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 320ms var(--ease-out);
+}
+:root[dir='rtl'] .nav-links a::after {
+  transform-origin: left center;
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+  :root[dir='rtl'] .nav-links a:hover::after {
+    transform-origin: right center;
+  }
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--rule-dark);
+  transition: transform 160ms var(--ease-out);
+}
+.nav-burger:active {
+  transform: scale(0.94);
+}
+.nav-burger span {
+  position: absolute;
+  inset-inline-start: 13px;
+  width: 18px;
+  height: 1.6px;
+  background: var(--indigo);
+  border-radius: 2px;
+  transition: transform 420ms var(--ease-in-out);
+}
+.nav-burger span:first-child {
+  top: 18px;
+}
+.nav-burger span:last-child {
+  top: 24px;
+}
+.nav-burger[aria-expanded='true'] span:first-child {
+  transform: translateY(3px) rotate(45deg);
+}
+.nav-burger[aria-expanded='true'] span:last-child {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+@media (max-width: 940px) {
+  .nav-links,
+  .nav-actions > .lang-toggle,
+  .nav-wa {
+    display: none;
+  }
+  .nav-actions {
+    margin-inline-start: auto;
+  }
+  .nav-burger {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-logo img {
+    height: 46px;
+  }
+}
+
+/* Mobile menu */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: calc(var(--nav-h) + 40px) var(--margin) calc(32px + env(safe-area-inset-bottom));
+  background: var(--night);
+  color: var(--paper);
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.menu-links a {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 11vw, 3.6rem);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.12;
+  text-decoration: none;
+}
+
+.menu-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule-light);
+}
+
+/* The menu shares the header bar: its burger must stay above the panel. */
+.nav:has(.nav-burger[aria-expanded='true']) {
+  background: transparent;
+  box-shadow: none;
+  z-index: 75;
+}
+.nav:has(.nav-burger[aria-expanded='true']) .nav-logo {
+  visibility: hidden;
+}
+.nav:has(.nav-burger[aria-expanded='true']) .nav-burger {
+  box-shadow: inset 0 0 0 1px var(--rule-light);
+}
+.nav:has(.nav-burger[aria-expanded='true']) .nav-burger span {
+  background: var(--paper);
+}
