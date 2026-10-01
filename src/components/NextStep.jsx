@@ -7,7 +7,7 @@ import { RevealWords, FadeUp } from './Reveal'
 import { FlightSwoosh } from './FlightSwoosh'
 import { Magnetic } from './Magnetic'
 import { Stars } from './Stars'
-import { WhatsAppIcon } from './Icons'
+import { PinIcon, WhatsAppIcon } from './Icons'
 import './NextStep.css'
 
 // The page closes the way it opened: the logo's swoosh drawn once more, now across the night.
@@ -52,6 +52,11 @@ export function NextStep() {
           </Magnetic>
           <a className="btn btn-line paper btn-lg" href={booking} target="_blank" rel="noopener noreferrer">
             {t.next.secondary}
+          </a>
+          <a className="btn btn-line paper btn-lg" href={contact.mapUrl} target="_blank" rel="noopener noreferrer">
+            <PinIcon width="20" height="20" />
+            {t.next.map}
+            <span className="visually-hidden">{t.mapNewTab}</span>
           </a>
         </FadeUp>
         <div className="next-flight">

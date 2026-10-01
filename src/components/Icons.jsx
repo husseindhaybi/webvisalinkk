@@ -34,6 +34,15 @@ export function WhatsAppIcon(props) {
   )
 }
 
+export function PinIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M12 21.5s-6.8-6.1-6.8-11.6a6.8 6.8 0 0 1 13.6 0c0 5.5-6.8 11.6-6.8 11.6z" {...line} strokeWidth={1.8} />
+      <circle cx="12" cy="9.8" r="2.5" {...line} strokeWidth={1.8} />
+    </svg>
+  )
+}
+
 export function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>

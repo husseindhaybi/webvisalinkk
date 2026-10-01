@@ -123,6 +123,7 @@ const en = {
     body: 'Tell us about your plans. Let’s discuss how we can help.',
     primary: 'Chat with Us on WhatsApp',
     secondary: 'Book a Consultation',
+    map: 'Find Our Office',
   },
   messages: {
     general: 'Hello Visa Linkk, I’d like to ask about your services.',
@@ -139,6 +140,7 @@ const en = {
   },
   floating: 'Chat on WhatsApp',
   newTab: '(opens WhatsApp)',
+  mapNewTab: '(opens Google Maps)',
 }
 
 const ar = {
@@ -264,6 +266,7 @@ const ar = {
     body: 'أخبرنا عن خططك، ولنتحدث عن كيف يمكننا مساعدتك.',
     primary: 'تحدث معنا عبر واتساب',
     secondary: 'احجز استشارة',
+    map: 'موقع مكتبنا',
   },
   messages: {
     general: 'مرحباً فيزا لينك، أود الاستفسار عن خدماتكم.',
@@ -280,6 +283,7 @@ const ar = {
   },
   floating: 'تحدث معنا عبر واتساب',
   newTab: '(يفتح واتساب)',
+  mapNewTab: '(يفتح خرائط Google)',
 }
 
 export const content = { en, ar }

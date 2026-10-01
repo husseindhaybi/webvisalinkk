@@ -21,7 +21,12 @@ export function Footer() {
           <dl className="footer-facts">
             <div>
               <dt className="caps">{t.footer.office}</dt>
-              <dd>{contact.address[lang]}</dd>
+              <dd>
+                <a href={contact.mapUrl} target="_blank" rel="noopener noreferrer">
+                  {contact.address[lang]}
+                  <span className="visually-hidden"> {t.mapNewTab}</span>
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="caps">{t.footer.contact}</dt>
