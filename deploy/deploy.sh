@@ -101,7 +101,6 @@ if [ "$SERVER" = nginx ]; then
 # VisaLinkk Lebanon — written by deploy/deploy.sh
 server {
     listen 80;
-    listen [::]:80;
     server_name ${DOMAINS[*]};
 
     root $WEB/current;
